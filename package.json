@@ -1,0 +1,34 @@
+{
+  "name": "dr-de-souzai-thumbnail-architect-refactor",
+  "version": "1.2.2",
+  "description": "Dr. De SouzAI Thumbnail Architect – modular Chrome/Edge extension with LibreTranslate support",
+  "author": "Dr. De SouzAI",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test":       "node --experimental-vm-modules node_modules/.bin/jest",
+    "test:watch": "node --experimental-vm-modules node_modules/.bin/jest --watch",
+    "test:cov":   "node --experimental-vm-modules node_modules/.bin/jest --coverage",
+    "lint":       "eslint src tests",
+    "build:zip":  "node scripts/build-zip.js"
+  },
+  "devDependencies": {
+    "jest":                  "^29.7.0",
+    "@jest/globals":         "^29.7.0",
+    "jest-environment-node": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {},
+    "testMatch": ["**/tests/**/*.test.js"],
+    "moduleNameMapper": {}
+  },
+  "keywords": [
+    "chrome-extension", "edge-extension", "youtube", "thumbnail",
+    "libretranslate", "translation", "side-panel", "manifest-v3"
+  ],
+  "repository": {
+    "type": "git",
+    "url":  "https://github.com/mrdesouzaphd-cmyk/dr-de-souzai-thumbnail-architect-refactor"
+  }
+}
