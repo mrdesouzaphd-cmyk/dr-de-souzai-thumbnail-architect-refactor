@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Dr. De SouzAI Thumbnail Architect",
+  "version": "1.2.2",
+  "description": "AI-powered YouTube thumbnail headline architect with multi-language support via self-hosted LibreTranslate.",
+  "author": "Dr. De SouzAI",
+  "homepage_url": "https://github.com/mrdesouzaphd-cmyk/dr-de-souzai-thumbnail-architect-refactor",
+  "icons": {
+    "16":  "icons/icon16.png",
+    "32":  "icons/icon32.png",
+    "48":  "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "sidePanel",
+    "activeTab"
+  ],
+  "host_permissions": [],
+  "action": {
+    "default_title": "Thumbnail Architect",
+    "default_icon": {
+      "16":  "icons/icon16.png",
+      "32":  "icons/icon32.png",
+      "48":  "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' http://localhost:* https://*;"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
